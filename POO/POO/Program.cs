@@ -10,14 +10,15 @@ namespace POO
 {
     class Program
     {
-        static animal gato = new animal();
-        static animal perro = new animal();
-        static animal serpiete = new animal();
-        static animal buho = new animal();
+      static Animales gato = new Animales();
+        static Animales perro = new Animales();
+        static Animales serpiente = new Animales();
+        static Animales buho = new Animales();
         static int op = 0;
         static void Main(string[] args)
-        {
-            
+        { 
+          while (op < 5)
+          {
             Console.WriteLine("---------------Cinta de Opciones---------------");
             Console.WriteLine("1. Gato");
             Console.WriteLine("2. Perro");
@@ -25,53 +26,57 @@ namespace POO
             Console.WriteLine("4. Búho");
             Console.WriteLine("5. Salir");
             Console.WriteLine("-----------------------------------------------");
-            Console.WriteLine("/n");
-            Console.WriteLine("Digite el numero de opcion que desea")
-            op=int.Parse(Console.ReadLine());
-            while(op<5 && op>0)
-            {
-
-             if(op==1)
-             {
-              gato.animals="Gato";
-              gato.NoPatas = 4;
-              gato.alimento ="Pescado";
-              gato.clasificacion = "Vertebrados";
-              gato.grupo = "Mamiferos";
-              gato.tiporeproduccion = "Viviparos";
-             }
-             else if(op == 2)
-             {
-              perro.animals="Perro";
-              perro.NoPatas=4;
-              perro.alimento = "Carne";
-              perro.clasificacion = "Vertebrados";
-              perro.grupo = "Mamiferos";
-              perro.tiporeproduccion = "Viviparos";
-             }
-             else if (op == 3)
-             {
-              serpiente.animals="Serpiente";
-              serpiente.NoPatas=0;
-              serpiente.alimento = "Roedores";
-              serpiente.clasificacion = "Vertebrados";
-              serpiente.grupo = "Reptiles";
-              serpiente.tiporeproduccion = "Oviparos";
-             }
-             else if (op==4)
-             {
-              buho.animals="Búho";
-              buho.NoPatas=2;
-              buho.alimento = "Reptiles";
-              buho.clasificacion = "Vertebrados";
-              buho.grupo = "Mamiferos";
-              buho.tiporeproduccion = "Viviparos";
-             }
-            }
-            if(op==5)
+            Console.WriteLine(" \n");
+            Console.WriteLine("Digite el numero de opcion que desea");
+            op = int.Parse(Console.ReadLine());
+            Console.WriteLine(" \n\n");
+            Console.Clear();
+                if (op == 1)
+                {
+                    gato.animal = "Gato";
+                    gato.Nopatas = 4;
+                    gato.alimento = "Pescado";
+                    gato.clasificacion = "Vertebrados";
+                    gato.grupo = "Mamiferos";
+                    gato.tiporeproduccion = "Viviparos";
+                    gato.Descripcion();
+                }
+                else if (op == 2)
+                {
+                    perro.animal = "Perro";
+                    perro.Nopatas = 4;
+                    perro.alimento = "Carne";
+                    perro.clasificacion = "Vertebrados";
+                    perro.grupo = "Mamiferos";
+                    perro.tiporeproduccion = "Viviparos";
+                    perro.Descripcion();
+                }
+                else if (op == 3)
+                {
+                    serpiente.animal = "Serpiente";
+                    serpiente.Nopatas = 0;
+                    serpiente.alimento = "Roedores";
+                    serpiente.clasificacion = "Vertebrados";
+                    serpiente.grupo = "Reptiles";
+                    serpiente.tiporeproduccion = "Oviparos";
+                    serpiente.Descripcion();
+                }
+                else if (op == 4)
+                {
+                    buho.animal = "Búho";
+                    buho.Nopatas = 2;
+                    buho.alimento = "Reptiles";
+                    buho.clasificacion = "Vertebrados";
+                    buho.grupo = "Mamiferos";
+                    buho.tiporeproduccion = "Viviparos";
+                    buho.Descripcion();
+                }
+          }
+            if (op == 5)
             {
                 Console.WriteLine("Gracias por usar nuestra aplicación");
             }
+            Console.ReadKey();
         }
     }
 }
